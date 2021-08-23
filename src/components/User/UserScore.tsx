@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UserSore = () => {
+const UserScore = () => {
     return (
         <div>
 
@@ -8,4 +8,4 @@ const UserSore = () => {
     );
 };
 
-export default UserSore;
+export default UserScore;

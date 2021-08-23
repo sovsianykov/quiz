@@ -1,9 +1,9 @@
-import {verbs, VerbsState} from "../content/verbs";
-import { CardActionTypes, VerbsAction  } from "./constants";
+import { verbs, VerbsState} from "../content/verbs";
+import { CardActionTypes, VerbsAction } from "./constants";
 
 
-const InitialState:VerbsState = {
-    cards : [],
+const InitialState: VerbsState = {
+    cards : verbs,
     score: 0,
 }
 const verbsReducer = (state= InitialState, action:VerbsAction) => {

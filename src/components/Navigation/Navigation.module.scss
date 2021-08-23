@@ -1,0 +1,31 @@
+.navigation {
+  width: 100%;
+  height: 40px;
+  background-color: #2a0101;
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5px;
+    display: flex;
+    height: 40px;
+
+    .navigationItem {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #909fa7;
+      padding:  0 5px;
+      font-weight: 700 ;
+      letter-spacing: .1rem;
+      height: 30px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+
+      &_active {
+        background-color: #440101;
+        color: aliceblue;
+      }
+    }
+  }
+}
