@@ -14,7 +14,7 @@
       align-items: center;
       justify-content: center;
       color: #909fa7;
-      padding:  0 5px;
+      padding:  0 10px;
       font-weight: 700 ;
       letter-spacing: .1rem;
       height: 30px;
@@ -25,6 +25,17 @@
       &_active {
         background-color: #440101;
         color: aliceblue;
+      }
+    }
+    .score {
+      @extend .navigationItem;
+      margin-left: auto;
+
+      .value {
+        color: #fff;
+        margin-left: 10px;
+        width: 30px;
+
       }
     }
   }

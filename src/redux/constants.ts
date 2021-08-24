@@ -1,5 +1,5 @@
-// import { Verb } from "../content/verbs";
-// import {CorrectAnswerAction} from "./actions";
+import { Verb } from "../content/verbs";
+
 
 export enum CardActionTypes  {
      CHECK_ANSWER = "CHECK_ANSWER",
@@ -8,10 +8,10 @@ export enum CardActionTypes  {
      RANDOMIZE = "RANDOMIZE",
      GET_VERBS = "GET_VERBS"
 }
-interface CheckAnswerAction {
- type: CardActionTypes.CHECK_ANSWER;
- payload: number;
-}
+// interface CheckAnswerAction {
+//  type: CardActionTypes.CHECK_ANSWER;
+//  payload: number;
+// }
 interface TryAgainAction {
     type: CardActionTypes.TRY_AGAIN;
     payload: boolean;
@@ -24,14 +24,15 @@ interface ChangeScoreAction {
     payload: number
 //
 }
-// interface  CorrectAnswerAction {
-//     type: CardActionTypes.CHECK_ANSWER;
-//     payload: Verb[],
-//
-// }
+interface  CorrectAnswerAction {
+    type: CardActionTypes.CHECK_ANSWER;
+    payload: Verb,
+    payloadId: number
+
+}
 
 export type VerbsAction =
-    | CheckAnswerAction | TryAgainAction | GetVerbsAction | ChangeScoreAction;
+     | TryAgainAction | GetVerbsAction | ChangeScoreAction| CorrectAnswerAction ;
 
 
 

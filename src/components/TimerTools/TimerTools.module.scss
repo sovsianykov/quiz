@@ -1,0 +1,35 @@
+
+  .container {
+    background-color: #2a0101;
+    max-width: 1150px;
+    margin: 0 auto 5px;
+    display: flex;
+    height: 40px;
+
+    .timerItem {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #b0bfc7;
+      padding:  0 10px;
+      font-weight: 700 ;
+      line-height: 30px;
+      letter-spacing: .1rem;
+      height: 40px;
+      &_active {
+        background-color: #440101;
+        color: aliceblue;
+      }
+    }
+    .score {
+      @extend .timerItem;
+      margin: 0 auto;
+      .value {
+        color: #fff;
+        margin: 0 5px 0 10px;
+        width: 200px;
+
+      }
+    }
+  }
+

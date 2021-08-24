@@ -11,7 +11,7 @@ const verbsReducer = (state= InitialState, action:VerbsAction) => {
         case CardActionTypes.GET_VERBS: return state.cards;
         case CardActionTypes.CHECK_ANSWER: return {
             ...state,
-            cards: action.payload
+            cards: state.cards.splice(action.payloadId,1, action.payload)
         };
         case CardActionTypes.TRY_AGAIN: return {
             ...state,
@@ -19,7 +19,7 @@ const verbsReducer = (state= InitialState, action:VerbsAction) => {
         };
         case CardActionTypes.CHANGE_SCORE: return {
             ...state,
-            score: action.payload
+            score: state.score + action.payload
         };
         default : return state;
 

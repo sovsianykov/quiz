@@ -9,7 +9,7 @@ const MainGrid: FunctionComponent<GridProps> = ({ items }) => {
 
   return (
 
-      <Grid container spacing={2} className={styles.gridContainer}>
+      <Grid container spacing={1} className={styles.gridContainer}  >
         {items.map((element) => (
           <Grid item
                 md={2}

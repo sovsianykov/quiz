@@ -18,6 +18,7 @@ const Navigation: FunctionComponent = () => {
                           active={activeId === item.id} />
         ))}
       </div>
+
     </nav>
   );
 };

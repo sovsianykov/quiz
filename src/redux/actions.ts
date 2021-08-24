@@ -1,5 +1,5 @@
 import {CardActionTypes} from "./constants";
-import {Verb} from "../content/verbs";
+import { Verb } from "../content/verbs";
 
 
 export const GetVerbsAction = () => {
@@ -7,15 +7,23 @@ export const GetVerbsAction = () => {
         type: CardActionTypes.GET_VERBS
     };
 }
-export const CheckAnswerAction = (array:Verb[]) => {
+export const ChangeScoreAction = (value: number) => {
+    console.log(value)
     return {
-        type: CardActionTypes.CHECK_ANSWER,
-        payload : array
+        type: CardActionTypes.CHANGE_SCORE,
+        payload: value
     };
 }
-export const CorrectAnswerAction = (answer:boolean) => {
+// export const CheckAnswerAction = (array:Verb[]) => {
+//     return {
+//         type: CardActionTypes.CHECK_ANSWER,
+//         payload : array
+//     };
+// }
+export const CorrectAnswerAction = (id:number ,array:Verb) => {
     return {
         type: CardActionTypes.CHECK_ANSWER,
-        payload : answer
+        payload : array,
+        payloadId: id
     };
 }
