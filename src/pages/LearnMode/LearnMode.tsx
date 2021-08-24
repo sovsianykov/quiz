@@ -4,7 +4,7 @@ import React, { FunctionComponent } from 'react';
 const LearnMode: FunctionComponent = () => {
     return (
         <section >
-            LearnMode
+            Learn Mode Under Construction
         </section>
     );
 };
